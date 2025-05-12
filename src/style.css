@@ -1,19 +1,27 @@
-/* Reset básico */
+/* Reset básico para garantir um layout mais limpo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo geral da página */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor de texto padrão */
     line-height: 1.6;
 }
 
+h1, h2 {
+    font-weight: bold;
+}
+
+/* Estilo para o header */
 header {
-    background-color: #0077cc;
+    background-color: #0077cc; /* Cor azul escuro */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .navbar {
@@ -24,7 +32,7 @@ header {
 }
 
 .navbar .logo img {
-    width: 120px;
+    width: 150px;
 }
 
 .nav-links {
@@ -40,70 +48,183 @@ header {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
+.nav-links li a:hover {
+    color: #ffdd57; /* Cor amarela quando passar o mouse */
+}
+
+/* Seção hero com carrossel */
 .hero {
-    background-color: #f4f4f4;
-    padding: 50px 0;
+    background-color: #1a73e8; /* Cor de fundo azul claro */
+    color: white;
     text-align: center;
+    padding: 80px 20px;
 }
 
 .carousel-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-item {
     position: relative;
+    width: 100%;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .caption {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-size: 24px;
-    color: white;
+    font-size: 2rem;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.about, .servicos, .contato {
-    padding: 40px 20px;
+/* Seção de Sobre */
+#sobre {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#sobre h1 {
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção de Serviços */
+#servicos {
+    background-color: #f0f8ff; /* Azul claro */
+    padding: 60px 20px;
     text-align: center;
 }
 
 .servicos-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .servico {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.servico:hover {
+    transform: translateY(-10px); /* Efeito de hover */
 }
 
 .servico img {
     width: 80px;
+    margin-bottom: 20px;
+}
+
+.servico h2 {
+    color: #0077cc;
     margin-bottom: 10px;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
+.servico p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Seção de Contato */
+#contato {
+    background-color: #0077cc; /* Cor azul */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contato h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 .social-links a {
+    display: inline-block;
     margin: 0 15px;
+    transition: transform 0.3s ease;
 }
 
+.social-links a img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Seção de Rodapé */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #0077cc;
+        padding: 10px;
+        border-radius: 8px;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburguer {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .servicos-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .servico {
+        width: 100%;
+    }
 }

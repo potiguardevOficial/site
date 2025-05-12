@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo img {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.about, .servicos, .contato {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.servico {
+    width: 30%;
+    text-align: center;
+}
+
+.servico img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 15px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
